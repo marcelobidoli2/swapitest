@@ -9,3 +9,14 @@
 /home/mabidoli/Projects/KneatTest/kneat.swapi/obj/Debug/netcoreapp2.2/kneat.swapi.AssemblyInfo.cs
 /home/mabidoli/Projects/KneatTest/kneat.swapi/obj/Debug/netcoreapp2.2/kneat.swapi.dll
 /home/mabidoli/Projects/KneatTest/kneat.swapi/obj/Debug/netcoreapp2.2/kneat.swapi.pdb
+/home/mabidoli/Projects/KneatTest/swapitest/kneat.swapi/obj/Debug/netcoreapp2.2/kneat.swapi.csprojAssemblyReference.cache
+/home/mabidoli/Projects/KneatTest/swapitest/kneat.swapi/obj/Debug/netcoreapp2.2/kneat.swapi.csproj.CoreCompileInputs.cache
+/home/mabidoli/Projects/KneatTest/swapitest/kneat.swapi/obj/Debug/netcoreapp2.2/kneat.swapi.AssemblyInfoInputs.cache
+/home/mabidoli/Projects/KneatTest/swapitest/kneat.swapi/obj/Debug/netcoreapp2.2/kneat.swapi.AssemblyInfo.cs
+/home/mabidoli/Projects/KneatTest/swapitest/kneat.swapi/obj/Debug/netcoreapp2.2/kneat.swapi.dll
+/home/mabidoli/Projects/KneatTest/swapitest/kneat.swapi/obj/Debug/netcoreapp2.2/kneat.swapi.pdb
+/home/mabidoli/Projects/KneatTest/swapitest/kneat.swapi/bin/Debug/netcoreapp2.2/kneat.swapi.deps.json
+/home/mabidoli/Projects/KneatTest/swapitest/kneat.swapi/bin/Debug/netcoreapp2.2/kneat.swapi.runtimeconfig.json
+/home/mabidoli/Projects/KneatTest/swapitest/kneat.swapi/bin/Debug/netcoreapp2.2/kneat.swapi.runtimeconfig.dev.json
+/home/mabidoli/Projects/KneatTest/swapitest/kneat.swapi/bin/Debug/netcoreapp2.2/kneat.swapi.dll
+/home/mabidoli/Projects/KneatTest/swapitest/kneat.swapi/bin/Debug/netcoreapp2.2/kneat.swapi.pdb
