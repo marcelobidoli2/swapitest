@@ -82,6 +82,5 @@ namespace kneat.swapi.tests {
             // assert:
             Assert.Equal(stoppes, expectedStoppes);
         }
-
     }
 }
