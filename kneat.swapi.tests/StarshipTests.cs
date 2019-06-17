@@ -24,26 +24,30 @@ namespace kneat.swapi.tests {
             var starshipConsubamles = "2 months";
             var starshipMGLT = 75;
             string starshipName = null;
+            var expectedNotification = "Name is required.";
 
             // act:
             var starship = new Starship(starshipName, starshipMGLT, starshipConsubamles);
 
             // assert:
             Assert.False(starship.IsValid);
-            Assert.Equal(starship.ValidationNotifications[0], "Name is required.");
+            Assert.Equal(starship.ValidationNotifications[0], expectedNotification);
         }
 
         [Fact]
         public void GIVIN_INVALID_CONSUMABLES_RETURN_ISVALID_FALSE_WITH_NOTIFICATION() {
             // arrange:
             var consubamles = "Not a valid consumable";
+            var starshipMGLT = 75;
+            var starshipName = "Millennium Falcon";
+            var expectedNotification = "Consumables must be a valid day, week, month or year.";
 
             // act:
-            var starship = new Starship("Millennium Falcon", 75, consubamles);
+            var starship = new Starship(starshipName, starshipMGLT, consubamles);
 
             // assert:
             Assert.False(starship.IsValid);
-            Assert.Equal(starship.ValidationNotifications[0], "Consumables must be a valid day, week, month or year.");
+            Assert.Equal(starship.ValidationNotifications[0], expectedNotification);
         }
 
         [Fact]
@@ -52,13 +56,14 @@ namespace kneat.swapi.tests {
             var starshipConsubamles = "2 months";
             var starshipMGLT = -75;
             var starshipName = "Millennium Falcon";
+            var expectedNotification = "MGLT must be gratter then 0.";
 
             // act:
             var starship = new Starship(starshipName, starshipMGLT, starshipConsubamles);
 
             // assert:
             Assert.False(starship.IsValid);
-            Assert.Equal(starship.ValidationNotifications[0], "MGLT must be gratter then 0.");
+            Assert.Equal(starship.ValidationNotifications[0], expectedNotification);
         }
 
         [Fact]
