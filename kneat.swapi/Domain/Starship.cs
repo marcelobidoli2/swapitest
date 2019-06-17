@@ -9,6 +9,9 @@ namespace kneat.swapi.Domain {
         private readonly int HOURS_IN_MOUNT = 720;
         private readonly int HOURS_IN_YEAR = 8760;
 
+        /// <summary>
+        /// Starship constructor with required property values.
+        /// </summary>
         public Starship(string name, int mGLT, string consumables) {
             this.Name = name;
             this.MGLT = mGLT;
@@ -32,7 +35,15 @@ namespace kneat.swapi.Domain {
         /// </summary>
         /// <value>The consumables period.</value>
         public string Consumables { get; private set; }
+        /// <summary>
+        /// Starship class status based on validation.
+        /// </summary>
+        /// <value>The starship class status.</value>
         public bool IsValid => this.ValidationNotifications.Count == 0;
+        /// <summary>
+        /// Contains the list of validation notifications.
+        /// </summary>
+        /// <value>The validation notification list.</value>
         public IList<string> ValidationNotifications { get; private set; }
 
         /// <summary>
@@ -82,13 +93,16 @@ namespace kneat.swapi.Domain {
             return (mGLT / (consumables * this.MGLT));
         }
 
+        /// <summary>
+        /// Validates the parameters required for the construction of the class.
+        /// </summary>
         private void Validate() {
-            if(String.IsNullOrEmpty(Name)) { this.ValidationNotifications.Add("Name is required."); }
-            if(MGLT < 0) { this.ValidationNotifications.Add("MGLT must be gratter then 0."); }
-            if(this.Consumables.Contains("day") == false 
-                && this.Consumables.Contains("week") == false
-                && this.Consumables.Contains("month") == false
-                && this.Consumables.Contains("year") == false) { this.ValidationNotifications.Add("Consumables must be a valid day, week, month or year."); }
+            if (String.IsNullOrEmpty(Name)) { this.ValidationNotifications.Add("Name is required."); }
+            if (MGLT < 0) { this.ValidationNotifications.Add("MGLT must be gratter then 0."); }
+            if (this.Consumables.Contains("day") == false &&
+                this.Consumables.Contains("week") == false &&
+                this.Consumables.Contains("month") == false &&
+                this.Consumables.Contains("year") == false) { this.ValidationNotifications.Add("Consumables must be a valid day, week, month or year."); }
         }
     }
 }
