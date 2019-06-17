@@ -1,38 +1,32 @@
-# swapitest
+# SWAPI Required Stop Counter
 
-1. Connect to SW API    
-    {
-        "count": 37,
-        "next": "https://swapi.co/api/starships/?page=2",
-        "previous": null,
-        "results": [
-            {
-                "name": "Executor",
-                "model": "Executor-class star dreadnought",
-                "manufacturer": "Kuat Drive Yards, Fondor Shipyards",
-                "cost_in_credits": "1143350000",
-                "length": "19000",
-                "max_atmosphering_speed": "n/a",
-                "crew": "279144",
-                "passengers": "38000",
-                "cargo_capacity": "250000000",
-                "consumables": "6 years",
-                "hyperdrive_rating": "2.0",
-                "MGLT": "40",
-                "starship_class": "Star dreadnought",
-                "pilots": [],
-                "films": [
-                    "https://swapi.co/api/films/2/",
-                    "https://swapi.co/api/films/3/"
-                ],
-                "created": "2014-12-15T12:31:42.547000Z",
-                "edited": "2017-04-19T10:56:06.685592Z",
-                "url": "https://swapi.co/api/starships/15/"
-            }
-        ]
-    }
+A dotnet core application, using C#, designed to calculate the number of resupply stops needed for a givin distance in Mega Lightyears.
 
-2. Deserialize
-3. Group and Count
-4. Print result
-5. Refactor interface
+## Usage
+1. Clone the repository:
+```
+git clone https://github.com/marcelobidoli2/swapitest.git
+```
+2. Build using dotnet command line:
+```
+dotnet build kneat.swapi
+```
+<p align="center">
+  <img src="./images/consolePromptBuild.png">
+</p>
+
+3. Run testes from command line:
+```
+dotnet test kneat.swapi.tests
+```
+<p align="center">
+  <img src="./images/consolePromptTests.png">
+</p>
+
+4. Run using dotnet command line:
+```
+dotnet run -p kneat.swapi
+```
+<p align="center">
+  <img src="./images/consolePromptRun.png">
+</p>
