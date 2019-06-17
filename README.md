@@ -12,7 +12,7 @@ git clone https://github.com/marcelobidoli2/swapitest.git
 dotnet build kneat.swapi
 ```
 <p align="center">
-  <img src="./images/consolePromptBuild.png">
+  <img src="./images/consolePromptBuild.jpg">
 </p>
 
 3. Run testes from command line:
@@ -20,7 +20,7 @@ dotnet build kneat.swapi
 dotnet test kneat.swapi.tests
 ```
 <p align="center">
-  <img src="./images/consolePromptTests.png">
+  <img src="./images/consolePromptTests.jpg">
 </p>
 
 4. Run using dotnet command line:
@@ -28,5 +28,5 @@ dotnet test kneat.swapi.tests
 dotnet run -p kneat.swapi
 ```
 <p align="center">
-  <img src="./images/consolePromptRun.png">
+  <img src="./images/consolePromptRun.jpg">
 </p>
