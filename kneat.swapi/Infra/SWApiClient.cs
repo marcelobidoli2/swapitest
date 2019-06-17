@@ -11,10 +11,17 @@ namespace kneat.swapi.Infra {
     public class SWApiClient {
         private readonly HttpClient _client;
 
+        /// <summary>
+        /// SWAPI client constructor.
+        /// </summary>
         public SWApiClient() {
             _client = new HttpClient();
         }
 
+        /// <summary>
+        /// Gets all starships from the SWAPI.co starships endpoint.
+        /// </summary>
+        /// <returns>All starships from SWAPI.co, converted to domain model.</returns>
         public async Task<IEnumerable<Starship>> GetAllStarships() {
             var swapiStarships = new List<Result>();
             var hasNext = true;
@@ -33,11 +40,15 @@ namespace kneat.swapi.Infra {
             return ConvertToStarship(swapiStarships);
         }
 
-        private IEnumerable<Starship> ConvertToStarship(List<Result> swapiStarships)
-        {
+        /// <summary>
+        /// Converts starships from the SWAPI.co to starships from the domain model.
+        /// </summary>
+        /// <param name="swapiStarships">Enumerable contaning SWAPI.co starships endpoint.</param>
+        /// <returns>Enumerable starships domain model.</returns>
+        private IEnumerable<Starship> ConvertToStarship(IEnumerable<Result> swapiStarships) {
             return swapiStarships
-                .Where(x => x.MGLT.Trim().ToLower() != "unknown"
-                    && x.consumables.Trim().ToLower() != "unknown")
+                .Where(x => x.MGLT.Trim().ToLower() != "unknown" &&
+                    x.consumables.Trim().ToLower() != "unknown")
                 .Select(x => new Starship(x.name, Int32.Parse(x.MGLT), x.consumables));
         }
     }
