@@ -2,6 +2,9 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "codecracker.CSharp/1.1.0": {
+        "type": "package"
+      },
       "Microsoft.NETCore.App/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -220,6 +223,21 @@
     }
   },
   "libraries": {
+    "codecracker.CSharp/1.1.0": {
+      "sha512": "s5KSzc65WjT+912x+OLGrW0jA/R8e67GRymQeVUfIJsBx+UJVnPShvaqM48G7oGYUTqVnpJElYjGX313yeSuIA==",
+      "type": "package",
+      "path": "codecracker.csharp/1.1.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/CodeCracker.CSharp.dll",
+        "codecracker.csharp.1.1.0.nupkg.sha512",
+        "codecracker.csharp.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
     "Microsoft.NETCore.App/2.2.0": {
       "sha512": "7z5l8Jp324S8bU8+yyWeYHXUFYvKyiI5lqS1dXgTzOx1H69Qbf6df12kCKlNX45LpMfCMd4U3M6p7Rl5Zk7SLA==",
       "type": "package",
@@ -722,7 +740,8 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.NETCore.App >= 2.2.0",
-      "Newtonsoft.Json >= 12.0.2"
+      "Newtonsoft.Json >= 12.0.2",
+      "codecracker.CSharp >= 1.1.0"
     ]
   },
   "packageFolders": {
@@ -773,6 +792,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.2, )"
+          },
+          "codecracker.CSharp": {
+            "target": "Package",
+            "version": "[1.1.0, )"
           }
         },
         "imports": [
