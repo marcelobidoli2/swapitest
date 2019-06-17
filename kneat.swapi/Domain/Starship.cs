@@ -33,7 +33,7 @@ namespace kneat.swapi.Domain {
         /// <value>The consumables period.</value>
         public string Consumables { get; private set; }
         public bool IsValid => this.ValidationNotifications.Count == 0;
-        public IList<string> ValidationNotifications { get; set; }
+        public IList<string> ValidationNotifications { get; private set; }
 
         /// <summary>
         /// Gets consumable amount as hours.

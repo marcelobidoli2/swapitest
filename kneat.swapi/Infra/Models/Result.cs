@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace kneat.swapi.Domain.Models {
+namespace kneat.swapi.Infra.Models {
     public class Result {
         public string name { get; set; }
         public string model { get; set; }

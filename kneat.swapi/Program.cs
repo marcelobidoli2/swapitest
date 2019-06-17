@@ -1,20 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using kneat.swapi.Domain.Models;
 using kneat.swapi.Infra;
-using Newtonsoft.Json;
 
 namespace kneat.swapi {
     class Program {
         static void Main(string[] args) {
-            
+            Console.WriteLine("===== Welcome to the SWAPI =====");
+
+            Console.Write("Please input the number of Mega Lightyears: ");
+            var distanceInput = Console.ReadLine();
+            var distance = 0;
+
+            if (Int32.TryParse(distanceInput, out distance) == false) {
+                Console.WriteLine("Please input a valid distance in Mega Lightyears...");
+                Environment.Exit(0);
+            }
+
             var swApiClient = new SWApiClient();
             var starships = swApiClient.GetAllStarships().Result;
 
-            var distance = 1000000;
-
-            foreach(var starship in starships) {
+            foreach (var starship in starships) {
                 Console.WriteLine($"{starship.Name}: {starship.CalculateStopsRequired(distance)}");
             }
 

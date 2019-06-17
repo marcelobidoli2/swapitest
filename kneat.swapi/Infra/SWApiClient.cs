@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using kneat.swapi.Domain;
-using kneat.swapi.Domain.Models;
+using kneat.swapi.Infra.Models;
 using Newtonsoft.Json;
 
 namespace kneat.swapi.Infra {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace kneat.swapi.Domain.Models {
+namespace kneat.swapi.Infra.Models {
     public class Starships {
         public int count { get; set; }
         public string next { get; set; }
